@@ -29,11 +29,12 @@ public class JpaEmpleosApplication implements CommandLineRunner {
      */
     @Override
     public void run(String... args) throws Exception {
+        System.out.println(categoriasRepo);
         // guardar();          // Create -> ejecutar solo una vez
         // buscarPorId(1);     // Read
         // modificar(1);       // Update
         // eliminar(1);        // Delete
-        listarTodos();         // Read all -> seguro para dejar activo por defecto
+        //listarTodos();         // Read all -> seguro para dejar activo por defecto
     }
 
     /**
