@@ -42,7 +42,10 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         // modificar(1);       // Update
         // eliminar(1);        // Delete
        // listarTodos();         // Read all -> seguro para dejar activo por defecto
-        buscarTodasJPA();
+
+        //nuevas jpa
+        //buscarTodasJPA();
+        borrarTodasEnBloque();
     }
 
     /**
@@ -110,5 +113,9 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         for (Categoria categoria : categorias) {
             System.out.println(categoria.getId() + " " + categoria.getNombre());
         }
+    }
+
+    private void borrarTodasEnBloque() {
+        categoriasJPARepo.deleteAllInBatch();
     }
 }
