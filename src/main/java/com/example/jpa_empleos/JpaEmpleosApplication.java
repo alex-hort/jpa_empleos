@@ -32,8 +32,8 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         System.out.println(categoriasRepo);
         // guardar();          // Create -> ejecutar solo una vez
         //buscarPorId(999);     // Read
-         modificar(1);       // Update
-        // eliminar(1);        // Delete
+        // modificar(1);       // Update
+         eliminar(1);        // Delete
         //listarTodos();         // Read all -> seguro para dejar activo por defecto
     }
 
