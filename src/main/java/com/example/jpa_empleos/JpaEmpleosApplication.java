@@ -7,6 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
 import java.util.Optional;
@@ -47,7 +50,8 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         //nuevas jpa
         //buscarTodasJPA();
         //borrarTodasEnBloque();
-        buscarTodosOrdenados();
+//        buscarTodosOrdenados();
+        buscarTodosPaginacion();
     }
 
     /**
@@ -125,6 +129,14 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         List<Categoria> categorias = categoriasJPARepo.findAll(Sort.by("nombre"));
         for (Categoria categoria : categorias) {
             System.out.println(categoria.getId() + " " + categoria.getNombre()); //.descending()
+        }
+    }
+    private void buscarTodosPaginacion() {
+        Page<Categoria> page = categoriasJPARepo.findAll(PageRequest.of(0, 5));
+        System.out.println("Total Registros: " + page.getTotalElements());
+        System.out.println("Total Paginas: " + page.getTotalPages());
+        for (Categoria c : page.getContent()) {
+            System.out.println(c.getId() + " " + c.getNombre());
         }
     }
 }
