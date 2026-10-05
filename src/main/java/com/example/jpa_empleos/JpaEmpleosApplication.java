@@ -52,7 +52,7 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         //borrarTodasEnBloque();
 //        buscarTodosOrdenados();
 //        buscarTodosPaginacion();
-        buscarTodosPaginacionOrdenados();
+//       DSw
     }
 
     /**
