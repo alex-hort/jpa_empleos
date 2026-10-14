@@ -36,13 +36,14 @@ public class Usuario {
     @Column(name = "password", nullable = false, length = 100)
     private String password;
 
+    @Builder.Default
     @Column(name = "estatus", nullable = false)
     private Integer estatus = 1;
 
     @Column(name = "fechaRegistro")
     private LocalDate fechaRegistro;
 
-    // Relacion ManyToMany con Perfiles usando la tabla UsuarioPerfil
+    // Relación ManyToMany con Perfiles usando la tabla UsuarioPerfil
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "UsuarioPerfil",

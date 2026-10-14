@@ -3,7 +3,7 @@ package com.example.jpa_empleos.models;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Vacantes")
@@ -25,7 +25,7 @@ public class Vacante {
     private String descripcion;
 
     @Column(name = "fecha", nullable = false)
-    private Date fecha;
+    private LocalDate fecha;
 
     @Column(name = "salario", nullable = false)
     private Double salario;
@@ -35,16 +35,16 @@ public class Vacante {
     @Column(name = "estatus", nullable = false)
     private EstatusVacante estatus;
 
-    @Column(name = "destacado", nullable = false)
+    @Column(name = "destacado")
     private Integer destacado;
 
-    @Column(name = "imagen", nullable = false, length = 250)
+    @Column(name = "imagen", length = 250)
     private String imagen;
 
     @Column(name = "detalles", columnDefinition = "text")
     private String detalles;
 
-    // FK a Categorias (id_categoria)
+    // FK a Categorias (id_categoria): muchas vacantes -> una categoría
     @ManyToOne
     @JoinColumn(name = "idCategoria")
     private Categoria categoria;
