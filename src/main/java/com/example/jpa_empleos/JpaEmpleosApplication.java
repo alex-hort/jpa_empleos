@@ -47,12 +47,15 @@ public class JpaEmpleosApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 //         buscarVacantes();                    // PDF 05: findAll + categoría
         // guardarVacante();                    // PDF 05: guardar una vacante
-        // buscarVacantesPorEstatus();          // PDF 07: findByEstatus
+
+
+         buscarVacantesPorEstatus();          // PDF 07: findByEstatus
         // buscarVacantesPorDestacadoEstatus(); // PDF 07: And + OrderBy
         // buscarVacantesSalario();             // PDF 07: Between
         // buscarVacantesVariosEstatus();       // PDF 07: In
+
         // crearUsuarioConPerfiles();           // PDF 06: ManyToMany (solo una vez: username/email únicos)
-        buscarUsuario();                     // PDF 06: usuario + perfiles
+//        buscarUsuario();                     // PDF 06: usuario + perfiles
 
 //        crearPerfiles();
 //        crearUsuarioConPerfiles();
