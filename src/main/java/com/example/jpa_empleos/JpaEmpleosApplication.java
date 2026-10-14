@@ -54,8 +54,8 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         // crearUsuarioConPerfiles();           // PDF 06: ManyToMany (solo una vez: username/email únicos)
         // buscarUsuario();                     // PDF 06: usuario + perfiles
 
-        crearPerfiles();
-
+//        crearPerfiles();
+//        crearUsuarioConPerfiles();
     }
 
     // ===================== PDF 05 - Relaciones =====================
@@ -175,4 +175,6 @@ public class JpaEmpleosApplication implements CommandLineRunner {
                 Perfil.builder().perfil("ADMINISTRADOR").build(),
                 Perfil.builder().perfil("USUARIO").build()));
     }
+
+
 }
