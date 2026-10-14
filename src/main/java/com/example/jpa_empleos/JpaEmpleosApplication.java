@@ -49,8 +49,8 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         // guardarVacante();                    // PDF 05: guardar una vacante
 
 
-         buscarVacantesPorEstatus();          // PDF 07: findByEstatus
-        // buscarVacantesPorDestacadoEstatus(); // PDF 07: And + OrderBy
+//         buscarVacantesPorEstatus();          // PDF 07: findByEstatus
+         buscarVacantesPorDestacadoEstatus(); // PDF 07: And + OrderBy
         // buscarVacantesSalario();             // PDF 07: Between
         // buscarVacantesVariosEstatus();       // PDF 07: In
 
