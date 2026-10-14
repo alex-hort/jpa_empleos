@@ -51,8 +51,8 @@ public class JpaEmpleosApplication implements CommandLineRunner {
 
 //         buscarVacantesPorEstatus();          // PDF 07: findByEstatus
 //         buscarVacantesPorDestacadoEstatus(); // PDF 07: And + OrderBy
-         buscarVacantesSalario();             // PDF 07: Between
-        // buscarVacantesVariosEstatus();       // PDF 07: In
+//         buscarVacantesSalario();             // PDF 07: Between
+         buscarVacantesVariosEstatus();       // PDF 07: In
 
         // crearUsuarioConPerfiles();           // PDF 06: ManyToMany (solo una vez: username/email únicos)
 //        buscarUsuario();                     // PDF 06: usuario + perfiles
