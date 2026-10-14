@@ -53,6 +53,9 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         // buscarVacantesVariosEstatus();       // PDF 07: In
         // crearUsuarioConPerfiles();           // PDF 06: ManyToMany (solo una vez: username/email únicos)
         // buscarUsuario();                     // PDF 06: usuario + perfiles
+
+        crearPerfiles();
+
     }
 
     // ===================== PDF 05 - Relaciones =====================
@@ -165,5 +168,11 @@ public class JpaEmpleosApplication implements CommandLineRunner {
         } else {
             System.out.println("Usuario no encontrado");
         }
+    }
+    private void crearPerfiles() {
+        perfilesRepo.saveAll(List.of(
+                Perfil.builder().perfil("SUPERVISOR").build(),
+                Perfil.builder().perfil("ADMINISTRADOR").build(),
+                Perfil.builder().perfil("USUARIO").build()));
     }
 }
